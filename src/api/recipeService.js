@@ -3,29 +3,9 @@
 
 // const API_URL = 'http://localhost:5000/api/generate-recipe'; // Your backend URL
 
-/**
- * In a real application, you would uncomment the axios part and use this function.
- * This function sends a request to your Node.js backend.
- */
-// export const fetchRecipe = async (query) => {
-//   try {
-//     const response = await axios.post(API_URL, { query });
-//     return response.data; // The backend should return the JSON recipe
-//   } catch (error) {
-//     console.error("Error fetching recipe:", error);
-//     // Rethrow a more user-friendly error message
-//     throw new Error(error.response?.data?.message || 'Failed to connect to the AI chef.');
-//   }
-// };
-
-
-/**
- * MOCK FUNCTION: Simulates an API call to the backend.
- * Replace this with the real `fetchRecipe` function above once your backend is ready.
- */
 export const fetchRecipe = async (query) => {
   console.log(`Simulating API call for: "${query}"`);
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 4000));
 
   if (!query.toLowerCase().includes('fail')) {
     // The mock now returns a stringified JSON, just like the real Gemini API might
